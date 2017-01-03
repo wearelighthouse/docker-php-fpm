@@ -9,6 +9,8 @@ RUN requirements="g++ libicu-dev" \
 
 # PHP extensions
 RUN docker-php-ext-install intl \
+	&& docker-php-ext-install mysql \
+	&& docker-php-ext-install mysqli \
 	&& docker-php-ext-install pdo_mysql
 
 # Composer
