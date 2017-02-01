@@ -5,6 +5,7 @@ MAINTAINER wearelighthouse <christy@wearelighthouse.com>
 # Update and requirements for extensions
 RUN apt-get update \
 	&& apt-get install -y \
+		vim \
 		g++ \
 		# exif requirements
 		libexif-dev \
@@ -26,3 +27,5 @@ RUN docker-php-ext-install -j$(nproc) exif \
 RUN curl -sSL https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && apt-get install -y git zip unzip
+
+COPY config/uploads.ini /usr/local/etc/php/conf.d/
