@@ -14,7 +14,9 @@ RUN apt-get update \
         libjpeg62-turbo-dev \
 		libpng12-dev \
 		# intl requirements
-		libicu-dev
+		libicu-dev \
+        # drupal requirements
+        drush
 
 # PHP extensions
 RUN docker-php-ext-install -j$(nproc) exif \
