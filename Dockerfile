@@ -12,7 +12,7 @@ RUN apt-get update \
 		# gd requirements
 		libfreetype6-dev \
         libjpeg62-turbo-dev \
-		libpng12-dev \
+		libpng-dev \
 		# intl requirements
 		libicu-dev
 
